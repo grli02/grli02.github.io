@@ -293,6 +293,10 @@
             cursor: default;
         }
 
+        #familie .section {
+            padding-top: 2rem;
+            padding-bottom: 0;
+        }
         .interest-card:hover {
             transform: translateY(-6px) rotate(0.5deg);
             box-shadow: 0 16px 40px rgba(74, 56, 40, 0.13);
@@ -616,3 +620,144 @@
                 text-align: center;
             }
         }
+
+/* Fotocollage - familie og venner */
+.collage {
+    max-width: 1100px;
+    margin: 0 auto;
+    margin-top: 5rem;
+    padding: 0 2.5rem 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0;
+}
+ 
+.collage-item {
+    position: relative;
+    margin: 0.6rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: default;
+}
+ 
+/* Polaroid-ramme */
+.collage-item::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    box-shadow: 0 6px 20px rgba(74, 56, 40, 0.15);
+    pointer-events: none;
+}
+ 
+.collage-item:hover {
+    z-index: 10;
+    transform: scale(1.04) rotate(0deg) !important;
+    box-shadow: 0 16px 40px rgba(74, 56, 40, 0.22);
+}
+ 
+.collage-item img {
+    display: block;
+    object-fit: cover;
+    filter: saturate(0.9);
+    transition: filter 0.3s ease;
+}
+ 
+.collage-item:hover img {
+    filter: saturate(1.05);
+}
+ 
+/* Polaroid: hvid kant */
+.polaroid {
+    background: #fdfaf6;;
+    padding: 10px 10px 0 10px; /* fjern bund-padding herfra */
+    box-shadow: 2px 4px 12px rgba(74, 56, 40, 0.15), 
+                -1px 2px 6px rgba(74, 56, 40, 0.08);
+}
+
+.collage-item--1.polaroid { padding-bottom: 0px; }
+.collage-item--2.polaroid { padding-bottom: 20px; }
+.collage-item--3.polaroid { padding-bottom: 12px; }
+.collage-item--4.polaroid { padding-bottom: 32px; }
+.collage-item--5.polaroid { padding-bottom: 32px; }
+.collage-item--6.polaroid { padding-bottom: 32px; }
+.collage-item--7.polaroid { padding-bottom: 32px; }
+.collage-item--8.polaroid { padding-bottom: 12px; }
+
+.collage-item--1.reveal.visible { transform: rotate(-3deg); }
+.collage-item--2.reveal.visible { transform: rotate(2deg); }
+.collage-item--3.reveal.visible { transform: rotate(-1.5deg); }
+.collage-item--4.reveal.visible { transform: rotate(4deg); }
+.collage-item--5.reveal.visible { transform: rotate(-2.5deg); }
+.collage-item--6.reveal.visible { transform: rotate(3deg); }
+.collage-item--7.reveal.visible { transform: rotate(-4deg); }
+.collage-item--8.reveal.visible { transform: rotate(2.5deg); }
+ 
+/* Individuelle størrelser og rotationer */
+.collage-item--1 {
+    transform: rotate(-10deg);
+}
+.collage-item--1 img { width: 200px; height: 155px; }
+
+ 
+.collage-item--2 {
+    transform: rotate(2deg);
+    margin-top: 2.5rem;
+}
+.collage-item--2 img { width: 150px; height: 185px; }
+ 
+.collage-item--3 {
+    transform: rotate(-1.5deg);
+    margin-top: -0.5rem;
+}
+.collage-item--3 img { width: 200px; height: 148px; }
+ 
+.collage-item--4 {
+    transform: rotate(4deg);
+    margin-top: 1.5rem;
+}
+.collage-item--4 img { width: 195px; height: 148px; }
+ 
+.collage-item--5 {
+    transform: rotate(-2.5deg);
+    margin-top: 1rem;
+}
+.collage-item--5 img { width: 148px; height: 170px; }
+ 
+.collage-item--6 {
+    transform: rotate(3deg);
+    margin-top: 2rem;
+}
+.collage-item--6 img { width: 150px; height: 188px; }
+ 
+.collage-item--7 {
+    transform: rotate(-4deg);
+    margin-top: 0.5rem;
+}
+.collage-item--7 img { width: 180px; height: 188px; }
+ 
+.collage-item--8 {
+    transform: rotate(2.5deg);
+    margin-top: 1.5rem;
+}
+.collage-item--8 img { width: 210px; height: 150px; }
+ 
+@media (max-width: 868px) {
+    .collage {
+        padding: 0 1rem 3rem;
+    }
+ 
+    .collage-item { margin: 0.4rem; }
+    .collage-item img { width: 140px !important; height: 140px !important; }
+    .collage-item--2 img,
+    .collage-item--5 img,
+    .collage-item--6 img,
+    .collage-item--7 img { height: 140px !important; }
+}
+
+.polaroid-caption {
+    font-family: 'Caveat', cursive;
+    font-size: 1.5rem;
+    color: var(--bark);
+    text-align: center;
+    padding-top: 6px;
+}
