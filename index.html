@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gry Lipczak</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ── NAVBAR ── -->
+    <nav id="navbar">
+        <a class="nav-brand" href="#">Gry Højagergaard Lipczak</a>
+        <ul class="nav-links">
+            <li><a href="#om-mig">Om mig</a></li>
+            <li><a href="#projekter">Projekter</a></li>
+            <li><a href="#interesser">Interesser</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <!-- ── HERO ── -->
+    <section id="hero">
+        <div class="hero-inner">
+            <div class="hero-text">
+                <p class="hero-eyebrow">Velkommen til min side</p>
+                <h1 class="hero-name">Gry H.<br><em>Lipczak</em></h1>
+                <p class="hero-tagline">Kandidatstuderende i Software Design (ITU, '26) med tre års erfaring fra det offentlige sundhedsvæsen. Jeg søger min første stilling inden for IT efter endt uddannelse.</p>
+                <a href="#om-mig" class="hero-cta">Lær mig at kende ↓</a>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-blob">
+                    <img src="mitbillede.png" class="hero-blob-img" alt="Gry Lipczak">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Bio-strip (mørk baggrund) -->
+    <div class="bio-strip" id="om-mig">
+        <div class="bio-strip-inner">
+            <div>
+                <p class="bio-strip-label">Kort fortalt</p>
+                <h3 class="bio-strip-title">Fra lab til<br><em>laptop</em></h3>
+            </div>
+            <div>
+                <p class="bio-strip-text"> Jeg startede som bioanalytiker på grund af nysgerrighed inden for naturvidenskaben og ønsket om at bidrage med noget meningsfuldt for andre mennesker. Imidlertid fandt jeg mig selv mere og mere draget mod laboratoriesystemerne end mod laboratoriearbejdet selv. Dette tog mig videre til en kandidat i Software Design, hvor jeg har arbejdet med alt fra programmering og algoritmer til systemudvikling og dataløsninger. Jeg vil stadig hjælpe mennesker, men ved hjælp af teknologi i stedet for pipetter.
+                </p>
+                <p class="bio-strip-text"> Jeg trives bedst mellem det tekniske og det organisatoriske, der hvor løsninger skal fungere i praksis og ikke kun på papiret. Jeg lærer hurtigt, går sjældent fra en opgave før den sidder rigtigt og har undervejs også opdaget en kreativ sans jeg ikke vidste jeg havde.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- ── PROJEKTER ── -->
+    <section id="projekter">
+        <div class="section">
+            <p class="section-label reveal">Udvalgte projekter</p>
+            <h2 class="section-title reveal reveal-delay-1">Ting jeg har <em>bygget.</em></h2>
+
+            <div class="card-grid">
+
+                <!-- Projekt 1 -->
+                <div class="project-card reveal reveal-delay-1">
+                    <img src="digitaltwin.png" class="project-card-img" alt="Projekttitel">
+                    <h3 class="project-card-title">Remote Eye-Tracking for Personalized Digital Twin Models</h3>
+                    <p class="project-card-desc">Et forskningsprojekt om tidlig diagnostik af neurodegenerative sygdomme via eye-tracking. Jeg designede og implementerede hele machine learning-pipelinen selv, fra dataindsamling ved brug af API-integration, til evaluering og analyse. Projektet lærte mig at arbejde selvstændigt med tekniske systemer fra ende til anden.
+                    </p>
+                    <span class="project-tag">API-integration</span>
+                </div>
+
+                <!-- Projekt 2 -->
+                <div class="project-card reveal reveal-delay-2">
+                    <img src="searchengine.png" class="project-card-img" alt="Projekttitel">
+                    <h3 class="project-card-title">Search Engine</h3>
+                    <p class="project-card-desc">Et søgesystem bygget i Java i et team på fire. Jeg bidrog primært til test og systemdesign. Projektet gav mig erfaring med Git-baseret samarbejde og testdrevet udvikling.
+                    </p>
+                    <span class="project-tag">Git-versionsstyring & Test</span>
+                </div>
+
+                <!-- Projekt 3 -->
+                <div class="project-card reveal reveal-delay-3">
+                    <img src="datamining.png" class="project-card-img" alt="Projekttitel">
+                    <h3 class="project-card-title">Ultra-Local Politics and Demographics in Copenhagen</h3>
+                    <p class="project-card-desc">En analyse af kommunalvalg i København og Frederiksberg fra 2009 til 2025, hvor vi integrerede demografiske, geospatiale og sociale mediedata i et team på fire. Jeg udviklede prædiktive modeller og visualiserede vælgerdynamikker. Projektet lærte mig at omsætte data til forståelse.
+                    </p>
+                    <span class="project-tag">Analyse & Visualisering</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- KOMPETENCER -->
+    <section id="kompetencer">
+        <div class="section">
+            <p class="section-label reveal">Hvad jeg arbejder med</p>
+            <h2 class="section-title reveal reveal-delay-1">Mine <em>kompetencer.</em></h2>
+
+            <div class="skills-grid reveal reveal-delay-2">
+                <div class="skill-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                    <span>Python</span>
+                </div>
+                <div class="skill-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fsharp/fsharp-original.svg" alt="F#">
+                    <span>F#</span>
+                </div>
+                <div class="skill-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
+                    <span>Java</span>
+                </div>
+                <div class="skill-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="SQL">
+                    <span>SQL</span>
+                </div>
+                <div class="skill-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachespark/apachespark-original.svg" alt="Spark">
+                    <span>Spark</span>
+                </div>
+                <div class="skill-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+                    <span>Git</span>
+                </div>
+                <div class="skill-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/junit/junit-original.svg" alt="JUnit">
+                    <span>JUnit</span>
+                </div>
+                <div class="skill-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
+                    <span>HTML</span>
+                </div>
+                <div class="skill-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
+                    <span>CSS</span>
+                </div>
+                <div class="skill-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure">
+                    <span>Azure</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Interesser -->
+    <section id="interesser">
+        <div class="section">
+            <p class="section-label reveal">Når jeg ikke arbejder</p>
+            <h2 class="section-title reveal reveal-delay-1">Mine <em>interesser.</em></h2>
+
+            <div class="card-grid">
+
+                <!-- Tennis -->
+                <div class="interest-card reveal reveal-delay-1">
+                    <video class="interest-card-img" autoplay loop muted playsinline>
+                        <source src="tennis.mp4" type="video/mp4">
+                    </video>
+                    <div class="interest-card-body">
+                        <span class="interest-card-tag">Sport</span>
+                        <h3 class="interest-card-title">Tennis</h3>
+                        <p class="interest-card-text">
+                            Blev inspireret af Caroline Wozniacki i '09 til at starte til tennis.
+                            Klubmester i den øvede række i B93 ('20). I dag spiller jeg mest hyggetennis med venner og familie.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Strik -->
+                <div class="interest-card reveal reveal-delay-2">
+                    <div class="interest-card-double-img">
+                        <img src="strik1.jpeg" class="interest-card-img" alt="Strik">
+                        <img src="strik2.jpeg" class="interest-card-img" alt="Strik">
+                    </div>
+                    <div class="interest-card-body">
+                        <span class="interest-card-tag">Håndværk</span>
+                        <h3 class="interest-card-title">Strik</h3>
+                        <p class="interest-card-text">Startede med at strikke i '25 som en måde at koble af fra studiet. Jeg elsker at strikke til veninder, deres børn og min familie, og prøver løbende nye mønstre og opskrifter.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Tilføj en 3. interesse her hvis du vil -->
+                <div class="interest-card reveal reveal-delay-3">
+                    <img src="surdej.jpg" class="interest-card-img" alt="Surdejsbagning">
+                    <div class="interest-card-body">
+                        <span class="interest-card-tag">Madlavning</span>
+                        <h3 class="interest-card-title">Surdejsbagning</h3>
+                        <p class="interest-card-text">Surdejsbagningen startede da jeg flyttede til Bornholm i '23'. Jeg bager mest pizza og boller, og er altid på jagt efter at perfektionere opskrifterne - til stor glæde for venner og familie.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ── Kontakt ── -->
+    <section id="kontakt">
+        <h2 class="section-title reveal reveal-delay-1">Kontakt <em>mig.</em></h2>
+        <p class="contact-sub reveal reveal-delay-2">Spørgsmål, samarbejde eller bare et hej, skriv endelig!</p>
+        <div class="contact-links reveal reveal-delay-3">
+            <a href="mailto:gry@lipczak.dk" class="contact-email">gry@lipczak.dk</a>
+            <a href="tel:+4550421285" class="contact-email">+45 50 42 12 85</a>
+            <a href="https://www.linkedin.com/in/gry-lipczak" class="contact-email" target="_blank">LinkedIn</a>
+        </div>
+    </section>
+
+    <!-- ── FOOTER ── -->
+    <footer>
+        <span>© 2025 Gry Højagergaard Lipczak</span>
+        <span>København</span>
+    </footer>
+
+    <script>
+        // Navbar shadow on scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 20);
+        });
+
+        // Scroll reveal
+        const reveals = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.12 });
+
+        reveals.forEach(el => observer.observe(el));
+    </script>
+
+</body>
+</html>
