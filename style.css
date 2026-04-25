@@ -721,7 +721,7 @@
     transform: rotate(-2.5deg);
     margin-top: 1rem;
 }
-.collage-item--5 img { width: 148px; height: 170px; }
+.collage-item--5 img { width: 180px; height: 170px; }
  
 .collage-item--6 {
     transform: rotate(3deg);
@@ -755,7 +755,7 @@
 }
 
 .polaroid-caption {
-    font-family: 'Caveat', cursive;
+    font-family: 'Indie Flower', cursive;
     font-size: 1.5rem;
     color: var(--bark);
     text-align: center;
