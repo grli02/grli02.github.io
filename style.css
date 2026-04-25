@@ -439,7 +439,19 @@
             border-radius: 100px;
             background: rgba(200, 149, 108, 0.12);
             color: var(--earth);
+            margin-top: 0.5rem;
+        }
+
+        .project-link {
+            display: inline-block;
+            font-size: 0.85rem;
+            color: #2b3a86;
+            text-decoration: none;
             margin-top: auto;
+        }
+
+        .project-link:hover {
+            text-decoration: underline;
         }
 
         /* om mig */
