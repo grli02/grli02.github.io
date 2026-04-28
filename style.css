@@ -83,6 +83,14 @@
             position: relative;
         }
 
+        .nav-links a.active {
+            color: var(--earth);
+        }
+
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
         .nav-links a::after {
             content: '';
             position: absolute;
@@ -184,7 +192,14 @@
             align-items: center;
             justify-content: center;
             position: relative;
+            animation: blobMorph 7s ease-in-out infinite;
         }
+
+        @keyframes blobMorph {
+            0%, 100% { border-radius: 60% 40% 55% 45% / 50% 45% 55% 50%; }
+            33%       { border-radius: 35% 65% 30% 70% / 65% 35% 65% 35%; }
+            66%       { border-radius: 65% 35% 70% 30% / 35% 65% 35% 65%; }
+            }
 
         .hero-blob-img {
             width: 100%;
@@ -785,6 +800,12 @@
     height: calc(100%);
     width: 1px;
     background: rgba(200, 149, 108, 0.3);
+    height: 0;
+    transition: height 3s ease;
+}
+
+.timeline-item.visible::before {
+    height: calc(100%);
 }
 
 .timeline-item::after {
@@ -820,4 +841,79 @@
 
 .timeline-item:last-child::before {
     display: none;
+}
+
+.skills-groups {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.skills-group-label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--sand);
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.75rem;
+    border-radius: 12px;
+    transition: background 0.3s ease, transform 0.3s ease;
+    cursor: default;
+}
+
+.skill-item:hover {
+    background: var(--warm);
+    transform: translateY(-3px);
+}
+
+.skill-item img {
+    transition: transform 0.3s ease;
+}
+
+.skill-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Progress bar */
+.progress-bar {
+    position: fixed;
+    top: 0; left: 0;
+    height: 2px;
+    width: 0%;
+    background: linear-gradient(to right, var(--clay), var(--earth));
+    z-index: 200;
+    transition: width 0.1s linear;
+}
+
+.hero-cv {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--bark);
+    border: 1px solid var(--bark);
+    padding: 0.9rem 2rem;
+    border-radius: 100px;
+    text-decoration: none;
+    margin-left: 1rem;
+    transition: background var(--transition), color var(--transition), transform var(--transition);
+}
+
+.hero-cv:hover {
+    background: var(--bark);
+    color: var(--cream);
+    transform: translateY(-2px);
 }
