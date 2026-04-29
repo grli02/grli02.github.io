@@ -917,3 +917,65 @@
     color: var(--cream);
     transform: translateY(-2px);
 }
+
+/* ── Video Lightbox ── */
+.video-lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+}
+.video-lightbox.active {
+    display: flex;
+}
+.video-lightbox video {
+    max-width: 90vw;
+    max-height: 85vh;
+    border-radius: 8px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+}
+.video-lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 28px;
+    font-size: 2.2rem;
+    color: white;
+    cursor: pointer;
+    line-height: 1;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+.video-lightbox-close:hover { opacity: 1; }
+.interest-card--clickable {
+    cursor: pointer;
+}
+.interest-card--clickable:hover .interest-card-img {
+    opacity: 0.85;
+    transition: opacity 0.2s;
+}
+
+.interest-card-link {
+    display: inline-block;
+    margin-top: 0.75rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    color: var(--bark);
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+    transition: opacity 0.2s;
+}
+.interest-card-link:hover {
+    opacity: 0.6;
+}
+
+.project-card--clickable {
+    cursor: pointer;
+}
+.project-card--clickable:hover .project-card-img {
+    opacity: 0.85;
+    transition: opacity 0.2s;
+}

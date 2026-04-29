@@ -91,7 +91,7 @@
             <div class="card-grid">
 
             <!-- Keynote -->
-                <div class="interest-card reveal reveal-delay-1">
+                <div class="interest-card interest-card--clickable reveal reveal-delay-1" onclick="openImgLightbox('speaker.jpg')">
                     <img src="speaker.jpg" class="interest-card-img" alt="Keynote i Sverige">
                     <div class="interest-card-body">
                         <span class="interest-card-tag">Formidling</span>
@@ -102,18 +102,19 @@
                 </div>
 
             <!-- Publikation & Bachelorpris -->
-                <div class="interest-card reveal reveal-delay-2">
+                <div class="interest-card interest-card--clickable reveal reveal-delay-2" onclick="openImgLightbox('dbiopris.png')">
                     <img src="dbiopris.png" class="interest-card-img" alt="Publikation og bachelorpris">
                     <div class="interest-card-body">
                         <span class="interest-card-tag">Forskning</span>
                         <h3 class="interest-card-title">Publikation & Bachelorpris</h3>
                         <p class="interest-card-text">Vores bachelorprojekt handlede om at gøre kræftdiagnostik hurtigere under operationer, så kirurger kan træffe bedre beslutninger mens patienten stadig ligger på bordet. Projektet vandt prisen for Bedste Bachelorprojekt hos dbio og blev efterfølgende publiceret i det videnskabelige tidsskrift APMIS (2026).
                         </p>
+                        <a href="https://onlinelibrary.wiley.com/doi/10.1111/apm.70145" target="_blank" class="interest-card-link">Læs artiklen →</a>
                     </div>
                 </div>
 
             <!-- Bornholm -->
-                <div class="interest-card reveal reveal-delay-3">
+                <div class="interest-card interest-card--clickable reveal reveal-delay-3" onclick="openLightbox()"  title="Klik for at se video">
                     <video class="interest-card-img" autoplay loop muted playsinline>
                         <source src="vaccine.mp4" type="video/mp4">
                     </video>
@@ -140,7 +141,7 @@
             <div class="card-grid">
 
                 <!-- Projekt 1 -->
-                <div class="project-card reveal reveal-delay-1">
+                <div class="project-card project-card--clickable reveal reveal-delay-1" onclick="openImgLightbox('digitaltwin.png')">
                     <img src="digitaltwin.png" class="project-card-img" alt="Projekttitel">
                     <h3 class="project-card-title">Remote Eye-Tracking for Personalized Digital Twin Models</h3>
                     <p class="project-takeaway">Projektet lærte mig at arbejde selvstændigt med tekniske systemer fra ende til anden.</p>
@@ -150,7 +151,7 @@
                 </div>
 
                 <!-- Projekt 2 -->
-                <div class="project-card reveal reveal-delay-2">
+                <div class="project-card project-card--clickable reveal reveal-delay-1" onclick="openImgLightbox('searchengine.png')">
                     <img src="searchengine.png" class="project-card-img" alt="Projekttitel">
                     <h3 class="project-card-title">Search Engine</h3>
                     <p class="project-takeaway">Projektet gav mig erfaring med Git-baseret samarbejde og testdrevet udvikling.</p>
@@ -161,7 +162,7 @@
                 </div>
 
                 <!-- Projekt 3 -->
-                <div class="project-card reveal reveal-delay-3">
+                <div class="project-card project-card--clickable reveal reveal-delay-3" onclick="openImgLightbox('datamining.png')">
                     <img src="datamining.png" class="project-card-img" alt="Projekttitel">
                     <h3 class="project-card-title">Ultra-Local Politics and Demographics in Copenhagen</h3>
                     <p class="project-takeaway">Projektet lærte mig at omsætte data til forståelse.</p> 
@@ -360,6 +361,53 @@
         <span>© 2025 Gry Højagergaard Lipczak</span>
         <span>København</span>
     </footer>
+
+
+    <!-- Image lightbox-->
+    <div class="video-lightbox" id="imgLightbox" onclick="closeImgLightbox(event)">
+        <span class="video-lightbox-close" onclick="closeImgLightbox()">&times;</span>
+        <img id="lightboxImg" src="" style="max-width:90vw; max-height:85vh; border-radius:8px;">
+    </div>
+    <!-- Video Lightbox -->
+    <div class="video-lightbox" id="videoLightbox" onclick="closeLightbox(event)">
+        <span class="video-lightbox-close" onclick="closeLightbox()">&times;</span>
+        <video id="lightboxVideo" controls>
+            <source src="vaccine.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <script>
+        function openLightbox() {
+            const lb = document.getElementById('videoLightbox');
+            const vid = document.getElementById('lightboxVideo');
+            const cardVid = document.querySelector('.interest-card--clickable video');
+            vid.currentTime = cardVid.currentTime;
+            lb.classList.add('active');
+            vid.play();
+        }
+        function closeLightbox(e) {
+            if (e && e.target !== e.currentTarget && !e.target.classList.contains('video-lightbox-close')) return;
+            const lb = document.getElementById('videoLightbox');
+            const vid = document.getElementById('lightboxVideo');
+            lb.classList.remove('active');
+            vid.pause();
+        }
+
+        function openImgLightbox(src) {
+            document.getElementById('lightboxImg').src = src;
+            document.getElementById('imgLightbox').classList.add('active');
+        }
+
+        function closeImgLightbox(e) {
+            if (e && e.target !== e.currentTarget && !e.target.classList.contains('video-lightbox-close')) return;
+            document.getElementById('imgLightbox').classList.remove('active');
+        }
+
+    
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') { closeLightbox(); closeImgLightbox(); }
+        });
+    </script>
 
     <script>
         // Navbar shadow on scroll
