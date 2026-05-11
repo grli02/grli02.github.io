@@ -524,7 +524,7 @@
 
         .project-card-title {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 1.4rem;
+            font-size: 1.2rem;
             font-weight: 400;
             color: var(--ink);
             margin-bottom: 0.5rem;
@@ -550,6 +550,7 @@
             background: rgba(200, 149, 108, 0.12);
             color: var(--earth);
             margin-top: 0.5rem;
+            align-self: flex-start;
         }
 
         .project-takeaway {
@@ -571,6 +572,22 @@
         }
 
         .project-link:hover {
+            text-decoration: underline;
+        }
+
+        .read-more-btn {
+            display: inline-block;
+            font-size: 0.85rem;
+            color: #2b3a86;
+            background: none;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+            font-family: inherit;
+            margin-bottom: 0.5rem;
+        }
+
+        .read-more-btn:hover {
             text-decoration: underline;
         }
 
@@ -1093,11 +1110,9 @@
 /* Skjulte projekter */
 .hidden-project {
     display: none;
-    overflow: hidden;
-    max-height: 0;
     opacity: 0;
-    transition: max-height 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                opacity 0.35s ease;
+    transform: translateY(12px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
 /* Vis mere / Vis mindre knap */
